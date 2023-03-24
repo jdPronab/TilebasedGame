@@ -41,7 +41,7 @@ class GameWidget(Widget):
         self.map = self.generate_tilemap(1, 10)
 
         #self.update_tile()
-        #self.render_map()
+        self.render_map()
 
         #self.prepare_map()
         #self.generate_map()
@@ -115,6 +115,7 @@ class GameWidget(Widget):
             self.tiles.append(row)
 
     def render_map(self):
+        self.clear_widgets()
         for row in self.tiles:
             for tile in row:
                 self.add_widget(tile)
